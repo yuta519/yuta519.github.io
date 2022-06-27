@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 interface Props {
@@ -18,7 +19,14 @@ const Card: React.FC<Props> = ({
   return (
     <Link key={cardName} href={cardLink}>
       <div className="flex-1 m-2 max-w-xs rounded overflow-hidden shadow-lg cursor-pointer">
-        <img key={cardName} className="w-full" src={img} alt={cardName} />
+        <Image
+          src={img}
+          alt="Picture of the author"
+          layout="responsive"
+          width={500}
+          height={280}
+          priority
+        />
         <div className="px-6 py-4">
           <div className="font-bold text-xl mb-2">{cardName}</div>
           <p className="text-gray-700 text-base">{cardDescription}</p>

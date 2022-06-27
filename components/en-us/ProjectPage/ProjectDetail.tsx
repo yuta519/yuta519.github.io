@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 import RecentBlogs from "@/components/en-us/IndexPage/RecentBlogs";
 
 interface project {
